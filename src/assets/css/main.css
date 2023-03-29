@@ -1,0 +1,1742 @@
+@font-face {
+  font-family: 'SF UI Display';
+  src: url("/assets/fonts/SFUIDisplay-Regular.eot");
+  src: local("SF UI Display Regular"), local("/assets/fonts/SFUIDisplay-Regular"), url("/assets/fonts/SFUIDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SFUIDisplay-Regular.woff2") format("woff2"), url("/assets/fonts/SFUIDisplay-Regular.woff") format("woff"), url("/assets/fonts/SFUIDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url("/assets/fonts/SFUIDisplay-Ultralight.eot");
+  src: local("SF UI Display Ultralight"), local("/assets/fonts/SFUIDisplay-Ultralight"), url("/assets/fonts/SFUIDisplay-Ultralight.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SFUIDisplay-Ultralight.woff2") format("woff2"), url("/assets/fonts/SFUIDisplay-Ultralight.woff") format("woff"), url("/assets/fonts/SFUIDisplay-Ultralight.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url("/assets/fonts/SFUIDisplay-Semibold.eot");
+  src: local("SF UI Display Semibold"), local("/assets/fonts/SFUIDisplay-Semibold"), url("/assets/fonts/SFUIDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SFUIDisplay-Semibold.woff2") format("woff2"), url("/assets/fonts/SFUIDisplay-Semibold.woff") format("woff"), url("/assets/fonts/SFUIDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url("/assets/fonts/SFUIDisplay-Bold.eot");
+  src: local("SF UI Display Bold"), local("/assets/fonts/SFUIDisplay-Bold"), url("/assets/fonts/SFUIDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SFUIDisplay-Bold.woff2") format("woff2"), url("/assets/fonts/SFUIDisplay-Bold.woff") format("woff"), url("/assets/fonts/SFUIDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url("/assets/fonts/SFUIDisplay-Medium.eot");
+  src: local("SF UI Display Medium"), local("/assets/fonts/SFUIDisplay-Medium"), url("/assets/fonts/SFUIDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SFUIDisplay-Medium.woff2") format("woff2"), url("/assets/fonts/SFUIDisplay-Medium.woff") format("woff"), url("/assets/fonts/SFUIDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url("/assets/fonts/SFUIDisplay-Thin.eot");
+  src: local("SF UI Display Light"), local("/assets/fonts/SFUIDisplay-Thin"), url("/assets/fonts/SFUIDisplay-Thin.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SSFUIDisplay-Thin.woff2") format("woff2"), url("/assets/fonts/SFUIDisplay-Thin.woff") format("woff"), url("/assets/fonts/SFUIDisplay-Thin.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url("/assets/fonts/SFUIDisplay-Light.eot");
+  src: local("SF UI Display Light"), local("/assets/fonts/SFUIDisplay-Light"), url("/assets/fonts/SFUIDisplay-Light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SFUIDisplay-Light.woff2") format("woff2"), url("/assets/fonts/SFUIDisplay-Light.woff") format("woff"), url("/assets/fonts/SFUIDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+html, body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  margin: auto;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  z-index: 1;
+  border: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  font-family: 'SF UI Display',Arial,-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  line-height: 1.154;
+  font-weight: 400;
+  font-size: 13px;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -firefox-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+header, footer, article, section, nav {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #F2F1F6;
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  scroll-snap-align: start;
+  min-height: -webkit-fill-available;
+}
+
+.wrapper > .spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.wrapper > .bg-filter {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#D3D4DB), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, #D3D4DB 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 0;
+}
+
+.wrapper > .stats {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: calc(100% - 48px);
+  border-radius: 25px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+          box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+  margin-top: 25px;
+}
+
+.wrapper > .header {
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  opacity: .999;
+}
+
+.wrapper > .header > .nav {
+  width: 100%;
+  margin-top: 26px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper > .header > .nav > .logo {
+  margin-left: 32px;
+}
+
+.wrapper > .header > .nav > .logo > img {
+  height: 32px;
+}
+
+.wrapper > .header > .nav > .menu {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  margin-right: 22px;
+}
+
+.wrapper > .header > .nav > .menu > img {
+  width: 100%;
+}
+
+.wrapper > .header > .general-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper > .header > .general-info > .info-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.wrapper > .header > .general-info > .info-content > .btn-radio {
+  width: 174px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.8px rgba(50, 50, 50, 0.3) solid;
+  border-radius: 50px;
+  margin-top: 85px;
+  margin-left: 33px;
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.26px;
+  color: #323232;
+}
+
+.wrapper > .header > .general-info > .info-content > .btn-radio > img {
+  height: 20px;
+  margin-right: 13px;
+}
+
+.wrapper > .header > .general-info > .info-content > ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  margin-left: 47px;
+}
+
+.wrapper > .header > .general-info > .info-content > ul > li {
+  width: auto;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'SF UI Display';
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.26px;
+  color: #323232;
+}
+
+.wrapper > .header > .general-info > .info-content > ul > li > .icon {
+  width: 30px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 9px;
+}
+
+.wrapper > .header > .general-info > .info-content > ul > li > .icon > img.bluetooth {
+  height: 23px;
+}
+
+.wrapper > .header > .general-info > .info-content > ul > li > .icon > img.battery {
+  height: 24px;
+}
+
+.wrapper > .header > .general-info > .info-content > ul > li > .icon > img.tasty {
+  height: 24px;
+}
+
+.wrapper > .header > .general-info > .preview {
+  width: 67px;
+  overflow: hidden;
+  margin-right: 58px;
+}
+
+.wrapper > .header > .general-info > .preview > img {
+  width: 100%;
+}
+
+.wrapper > .block-counter {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+          box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+}
+
+.wrapper > .block-counter > .date {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.22px;
+  color: #323232;
+}
+
+.wrapper > .block-counter > .counter-info {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: calc(100% - 48px);
+  height: 140px;
+  background: #FFFFFF;
+  opacity: 0.8;
+  -webkit-box-shadow: 0px 5px 10px rgba(172, 172, 172, 0.05);
+          box-shadow: 0px 5px 10px rgba(172, 172, 172, 0.05);
+  border-radius: 25px;
+  margin: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper > .block-counter > .counter-info > .total {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper > .block-counter > .counter-info > .total > .count {
+  font-family: 'SF UI Display';
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-transform: lowercase;
+  color: #323232;
+}
+
+.wrapper > .block-counter > .counter-info > .total > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 0.22px;
+  margin-top: 18px;
+  color: #323232;
+}
+
+.wrapper > .block-counter > .counter-info > .prev {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper > .block-counter > .counter-info > .prev > .count {
+  font-family: 'SF UI Display';
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-transform: lowercase;
+  color: #657786;
+  opacity: .75;
+}
+
+.wrapper > .block-counter > .counter-info > .prev > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 0.22px;
+  margin-top: 18px;
+  color: #657786;
+  opacity: .75;
+}
+
+.wrapper-stats {
+  width: 100%;
+  max-width: 428px;
+  height: 100%;
+  min-height: -webkit-fill-available;
+  scroll-snap-align: start;
+  background-color: #F2F1F6;
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-stats > .spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.wrapper-stats > .stats {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: calc(100% - 48px);
+  border-radius: 25px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+          box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+  margin-top: 25px;
+}
+
+.wrapper-stats > .puff-timer {
+  width: calc(100% - 48px);
+  height: 104px;
+  border-radius: 25px;
+  background-color: #fff;
+  margin-top: 22px;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+          box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-stats > .puff-timer > .progress-info {
+  width: auto;
+  width: calc(100% - 56px);
+  margin: 20px 28px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper-stats > .puff-timer > .progress-info > .label-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper-stats > .puff-timer > .progress-info > .label-block > span {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  letter-spacing: 0.26px;
+  color: #818C9D;
+}
+
+.wrapper-stats > .puff-timer > .progress-info > .label-block > span.big {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #323232;
+}
+
+.wrapper-stats > .puff-timer > .progress-info > .progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #F2F1F6;
+  border-radius: 50px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.wrapper-stats > .puff-timer > .progress-info > .progress-bar > .active {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: #FFFFFF;
+  border: 1px solid #F2F1F6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50px;
+}
+
+.wrapper-stats > .puff-timer > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #818C9D;
+}
+
+.wrapper-stats > .block-counter {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+          box-shadow: 0px 5px 10px 0px rgba(172, 172, 172, 0);
+}
+
+.wrapper-stats > .block-counter > .date {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.22px;
+  color: #323232;
+}
+
+.wrapper-stats > .block-counter > .counter-info {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: calc(100% - 48px);
+  height: 140px;
+  background: #FFFFFF;
+  opacity: 0.8;
+  -webkit-box-shadow: 0px 5px 10px rgba(172, 172, 172, 0.05);
+          box-shadow: 0px 5px 10px rgba(172, 172, 172, 0.05);
+  border-radius: 25px;
+  margin: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper-stats > .block-counter > .counter-info > .total {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper-stats > .block-counter > .counter-info > .total > .count {
+  font-family: 'SF UI Display';
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-transform: lowercase;
+  color: #323232;
+}
+
+.wrapper-stats > .block-counter > .counter-info > .total > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 0.22px;
+  margin-top: 18px;
+  color: #323232;
+}
+
+.wrapper-stats > .block-counter > .counter-info > .prev {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper-stats > .block-counter > .counter-info > .prev > .count {
+  font-family: 'SF UI Display';
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-transform: lowercase;
+  color: #657786;
+  opacity: .75;
+}
+
+.wrapper-stats > .block-counter > .counter-info > .prev > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 0.22px;
+  margin-top: 18px;
+  color: #657786;
+  opacity: .75;
+}
+
+.wrapper-connect {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  background: red;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper-connect > .bg-device {
+  width: auto;
+  margin: 60px 77px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper-connect > .bg-device > img {
+  width: 26vh;
+}
+
+.wrapper-connect > .spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.wrapper-connect > .label {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 151%;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #323232;
+}
+
+.wrapper-connect > .btn-connect {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: calc(100% - 98px);
+  height: 64px;
+  margin: 3em 49px 52px;
+  border-radius: 50px;
+  background-color: #323232;
+  font-family: 'SF UI Display';
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.wrapper-pre-update {
+  width: calc(100% - 86px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 43px;
+}
+
+.wrapper-pre-update > .title {
+  font-family: 'SF UI Display';
+  font-weight: 100;
+  font-size: 27px;
+  letter-spacing: 0.26px;
+  color: #323232;
+  margin-top: 60px;
+}
+
+.wrapper-pre-update > .label {
+  font-family: 'SF UI Display';
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 0.26px;
+  color: #323232;
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.wrapper-pre-update > .steps {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper-pre-update > .steps > .step {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.wrapper-pre-update > .steps > .step:last-child {
+  margin-bottom: 0px;
+}
+
+.wrapper-pre-update > .steps > .step > .icon {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  background-color: rgba(50, 50, 50, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 26px;
+  margin-right: 22px;
+}
+
+.wrapper-pre-update > .steps > .step > .icon > span {
+  width: 50px;
+  height: 50px;
+  border-radius: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(50, 50, 50, 0.1);
+  font-family: 'SF UI Display';
+  font-weight: 500;
+  font-size: 21px;
+  color: #FFFFFF;
+}
+
+.wrapper-pre-update > .steps > .step > .icon > span.active {
+  background-color: #71C13A;
+  color: #fff;
+}
+
+.wrapper-pre-update > .steps > .step > .text {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.26px;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #323232;
+  margin-bottom: 2px;
+}
+
+.wrapper-pre-update > .spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.wrapper-pre-update > .btn-confirm {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  height: 64px;
+  border-radius: 50px;
+  background-color: #323232;
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper-pre-update > .btn-cancel {
+  font-family: 'SF UI Display';
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #657786;
+  margin-bottom: 28px;
+}
+
+.popup-process-update {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+.popup-process-update > .popup-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-process-update > .popup-content > .process-update {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-process-update > .popup-content > .process-update > .logo {
+  width: auto;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.popup-process-update > .popup-content > .process-update > .logo > img {
+  height: 30px;
+}
+
+.popup-process-update > .popup-content > .process-update > .label {
+  font-family: 'SF UI Display';
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #657786;
+  margin-bottom: 32px;
+}
+
+.popup-process-update > .popup-content > .process-update > .progress-bar {
+  width: calc(100% - 120px);
+  height: 6px;
+  border-radius: 50px;
+  background-color: #ECECEC;
+  position: relative;
+  margin: 0px 60px;
+}
+
+.popup-process-update > .popup-content > .process-update > .progress-bar > .active {
+  width: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background: #71C13A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.popup-process-update > .popup-content > .process-update > .percent {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.0026em;
+  margin-top: 22px;
+  margin-bottom: 30px;
+  color: #323232;
+}
+
+.popup-process-update > .popup-content > .done-update {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-process-update > .popup-content > .done-update > .icon {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 35px;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.popup-process-update > .popup-content > .done-update > .icon > img {
+  width: 100%;
+}
+
+.popup-process-update > .popup-content > .done-update > .label {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  /* or 147% */
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #323232;
+}
+
+.popup-process-update > .popup-content > .done-update > .spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.popup-process-update > .popup-content > .done-update > .btn-confirm {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: calc(100% - 86px);
+  height: 64px;
+  border-radius: 50px;
+  background-color: #323232;
+  margin: 0px 43px;
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-settings {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+.popup-settings > .popup-bg-filter {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(50, 50, 50, 0.3);
+  z-index: -1;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.popup-settings > .popup-content {
+  width: calc(100% - 84px);
+  height: 600px;
+  background-color: #fff;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  padding: 35px 42px;
+  position: absolute;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+}
+
+.popup-settings > .popup-content > .logo {
+  width: auto;
+  height: 32px;
+  margin-bottom: 34px;
+}
+
+.popup-settings > .popup-content > .logo > img {
+  heighT: 32px;
+}
+
+.popup-settings > .popup-content > .close {
+  position: absolute;
+  top: 33px;
+  right: 32px;
+  width: 36px;
+  height: 36px;
+  background-color: #F2F1F6;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: .7;
+}
+
+.popup-settings > .popup-content > .close > img {
+  width: 14px;
+  opacity: .4;
+}
+
+.popup-settings > .popup-content > .params-info {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #657786;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup-settings > .popup-content > .params-info > span {
+  margin-bottom: 16px;
+}
+
+.popup-settings > .popup-content > .params-info > span:last-child {
+  margin-bottom: 0px;
+}
+
+.popup-settings > .popup-content > .btn-group {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 34px;
+}
+
+.popup-settings > .popup-content > .btn-group > .btn-item {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup-settings > .popup-content > .btn-group > .btn-item:last-child {
+  margin-bottom: 0px;
+}
+
+.popup-settings > .popup-content > .btn-group > .btn-item > .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 20px;
+  background-color: #F2F1F6;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-settings > .popup-content > .btn-group > .btn-item > .icon > img {
+  height: 100%;
+}
+
+.popup-settings > .popup-content > .btn-group > .btn-item > .text {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.26px;
+  color: #323232;
+}
+
+.popup-settings > .popup-content > .spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.popup-settings > .popup-content > .theme-group {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup-settings > .popup-content > .theme-group > .theme-item {
+  width: 63px;
+  height: 91px;
+  position: relative;
+}
+
+.popup-settings > .popup-content > .theme-group > .theme-item > img {
+  width: 100%;
+}
+
+.popup-settings > .popup-content > .theme-group > .theme-item.active::before {
+  content: '';
+  position: absolute;
+  bottom: -21px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background-color: rgba(101, 119, 134, 0.25);
+  left: calc(50% - 4px);
+}
+
+.popup-settings > .popup-content > .contact-group {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 4px;
+  margin-top: 55px;
+}
+
+.popup-settings > .popup-content > .contact-group > .contact-item {
+  width: 52px;
+  height: 52px;
+}
+
+.popup-settings > .popup-content > .contact-group > .contact-item > img {
+  width: 100%;
+}
+
+.popup-message {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+.popup-message > .popup-bg-filter {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(50, 50, 50, 0.3);
+  z-index: -1;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.popup-message > .popup-content {
+  width: calc(100% - 96px - 48px);
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 46px 48px 0px;
+  margin: 0px 24px;
+  position: absolute;
+  bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+.popup-message > .popup-content > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 151%;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #323232;
+  margin-bottom: 46px;
+}
+
+.popup-message > .popup-content > .btn-confirm {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  height: 60px;
+  border-radius: 50px;
+  background-color: #323232;
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #FFFFFF;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-update, .popup-ble, .popup-radio {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+.popup-update > .popup-bg-filter, .popup-ble > .popup-bg-filter, .popup-radio > .popup-bg-filter {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(50, 50, 50, 0.3);
+  z-index: -1;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.popup-update.resize > .popup-content > .title, .popup-ble.resize > .popup-content > .title, .popup-radio.resize > .popup-content > .title {
+  margin-bottom: 28px;
+}
+
+.popup-update.resize > .popup-content > .btn-confirm, .popup-ble.resize > .popup-content > .btn-confirm, .popup-radio.resize > .popup-content > .btn-confirm {
+  margin-bottom: 28px;
+}
+
+.popup-update > .popup-content, .popup-ble > .popup-content, .popup-radio > .popup-content {
+  width: calc(100% - 96px - 48px);
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 28px 48px 0px;
+  margin: 0px 24px;
+  position: absolute;
+  bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+.popup-update > .popup-content > .icon-device, .popup-ble > .popup-content > .icon-device, .popup-radio > .popup-content > .icon-device {
+  margin-bottom: 22px;
+}
+
+.popup-update > .popup-content > .title, .popup-ble > .popup-content > .title, .popup-radio > .popup-content > .title {
+  font-family: 'SF UI Display';
+  font-weight: 200;
+  font-size: 27px;
+  line-height: 34px;
+  color: #323232;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.popup-update > .popup-content > .label, .popup-ble > .popup-content > .label, .popup-radio > .popup-content > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 151%;
+  /* or 23px */
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #323232;
+}
+
+.popup-update > .popup-content > .dot-blue, .popup-ble > .popup-content > .dot-blue, .popup-radio > .popup-content > .dot-blue {
+  width: 18px;
+  height: 18px;
+  background: rgba(30, 76, 245, 0.15);
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 46px 0px;
+}
+
+.popup-update > .popup-content > .dot-blue > .dot, .popup-ble > .popup-content > .dot-blue > .dot, .popup-radio > .popup-content > .dot-blue > .dot {
+  width: 6px;
+  height: 6px;
+  background: #1E4CF5;
+  border-radius: 50px;
+}
+
+.popup-update > .popup-content > .version-line, .popup-ble > .popup-content > .version-line, .popup-radio > .popup-content > .version-line {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 64px;
+}
+
+.popup-update > .popup-content > .version-line > .old, .popup-ble > .popup-content > .version-line > .old, .popup-radio > .popup-content > .version-line > .old {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-update > .popup-content > .version-line > .old > .label, .popup-ble > .popup-content > .version-line > .old > .label, .popup-radio > .popup-content > .version-line > .old > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #657786;
+  margin-bottom: 6px;
+}
+
+.popup-update > .popup-content > .version-line > .old > .number, .popup-ble > .popup-content > .version-line > .old > .number, .popup-radio > .popup-content > .version-line > .old > .number {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #657786;
+}
+
+.popup-update > .popup-content > .version-line > .arrow, .popup-ble > .popup-content > .version-line > .arrow, .popup-radio > .popup-content > .version-line > .arrow {
+  width: auto;
+  margin: 22px 0px;
+}
+
+.popup-update > .popup-content > .version-line > .new, .popup-ble > .popup-content > .version-line > .new, .popup-radio > .popup-content > .version-line > .new {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-update > .popup-content > .version-line > .new > .label, .popup-ble > .popup-content > .version-line > .new > .label, .popup-radio > .popup-content > .version-line > .new > .label {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.popup-update > .popup-content > .version-line > .new > .number, .popup-ble > .popup-content > .version-line > .new > .number, .popup-radio > .popup-content > .version-line > .new > .number {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #000;
+}
+
+.popup-update > .popup-content > .btn-confirm, .popup-ble > .popup-content > .btn-confirm, .popup-radio > .popup-content > .btn-confirm {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  height: 60px;
+  border-radius: 50px;
+  background-color: #323232;
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-update > .popup-content > .btn-cancel, .popup-ble > .popup-content > .btn-cancel, .popup-radio > .popup-content > .btn-cancel {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #657786;
+  margin-bottom: 22px;
+}
+/*# sourceMappingURL=main.css.map */

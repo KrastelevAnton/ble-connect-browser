@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script> -->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body id="body">
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <!-- <script>eruda.init();</script> -->
+
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <script>
+      var siteWidth = 420;
+      var scale = screen.width / siteWidth;
+
+      document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+', user-scalable=no');
+    </script>
+    <!--<script src="//code.jivo.ru/widget/TKhehxAEoC" async></script>-->
+  </body>
+</html>
